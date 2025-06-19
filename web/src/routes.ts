@@ -21,6 +21,7 @@ export enum Routes {
   ParsedResult = `${Chunk}${Parsed}`,
   Result = '/result',
   ResultView = `${Chunk}${Result}`,
+  CloudCurio = '/cloudcurio',
 }
 
 const routes = [
@@ -157,6 +158,10 @@ const routes = [
       {
         path: Routes.Home,
         component: `@/pages${Routes.Home}`,
+      },
+      {
+        path: Routes.CloudCurio,
+        component: `@/pages${Routes.CloudCurio}`,
       },
     ],
   },

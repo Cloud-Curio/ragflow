@@ -1,0 +1,32 @@
+---
+slug: /cloudcurio_overview
+---
+# CloudCurio Deployment Overview
+
+This guide outlines the high-level design for hosting the RAGFlow web interface on **cloudcurio.cc** and connecting it to a free-tier Oracle Cloud database using Terraform.
+
+## Website Structure
+
+The `web` directory contains a React frontend that can be built into a static bundle. Deploy the compiled assets to object storage (e.g., OCI Object Storage static site hosting) or any static hosting platform.
+
+Recommended pages:
+
+- **Home** – introduction and sign-in link
+- **Dataset Explorer** – browse the `research` dataset
+- **Agent Playground** – run sample agents from the `agent` folder
+- **Docs** – link to these markdown guides
+
+## Oracle Cloud Database
+
+Use the Terraform configuration in `infrastructure/oci_free_tier` to provision an Autonomous Database. The output connection string can be saved as an environment variable for the backend API.
+
+### Steps
+
+1. Install Terraform and configure your OCI credentials.
+2. Run `terraform init` then `terraform apply` in the `infrastructure/oci_free_tier` directory.
+3. Update your backend configuration to point to the database connection string.
+
+## Going Further
+
+- Utilize the free tier to test RAG pipelines before scaling.
+- Consider adding Terraform modules for compute instances or object storage if needed.
