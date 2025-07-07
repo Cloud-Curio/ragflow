@@ -1119,7 +1119,22 @@
             "logo": "",
             "tags": "LLM,IMAGE2TEXT",
             "status": "1",
-            "llm": []
+            "llm": [
+                {
+                    "llm_name": "openrouter/camel-2-7b",
+                    "tags": "LLM,CHAT,8k",
+                    "max_tokens": 8192,
+                    "model_type": "chat",
+                    "is_tools": true
+                },
+                {
+                    "llm_name": "openrouter/mistral-7b",
+                    "tags": "LLM,CHAT,32k",
+                    "max_tokens": 32768,
+                    "model_type": "chat",
+                    "is_tools": true
+                }
+            ]
         },
         {
             "name": "StepFun",

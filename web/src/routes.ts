@@ -22,6 +22,7 @@ export enum Routes {
   Result = '/result',
   ResultView = `${Chunk}${Result}`,
   CloudCurio = '/cloudcurio',
+  Enterprise = '/enterprise',
 }
 
 const routes = [
@@ -162,6 +163,10 @@ const routes = [
       {
         path: Routes.CloudCurio,
         component: `@/pages${Routes.CloudCurio}`,
+      },
+      {
+        path: Routes.Enterprise,
+        component: `@/pages${Routes.Enterprise}`,
       },
     ],
   },
